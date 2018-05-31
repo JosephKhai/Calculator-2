@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="Calculator by Joseph" Height="430" Width="280">
+        Title="Basic Calculator" Height="430" Width="280">
     <Grid>
         <Grid>
             <Grid.ColumnDefinitions>
