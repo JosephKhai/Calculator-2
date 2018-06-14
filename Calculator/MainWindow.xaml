@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
         Title="Basic Calculator" Height="500" Width="320">
-    <Grid>
-        <Grid Margin="5"  >
+    <Grid Background="DarkCyan">
+        <Grid Margin="5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="5*"/>
                 <ColumnDefinition Width="71*"/>
@@ -17,6 +17,7 @@
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
+                <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -49,8 +50,9 @@
             <Button FontSize="18" BorderBrush="Bisque" Margin="1,1,1,0.8" Background="Gray" x:Name="btnZero" Grid.Column="2" Grid.Row="5" Click="btnZero_Click">0</Button>
             <Button FontSize="18" BorderBrush="Bisque" Margin="1,1,1,0.8" Background="Gray" x:Name="btnDecimal" Grid.Column="3" Grid.Row="5" Click="btnDecimal_Click">.</Button>
             <Button FontSize="18" BorderBrush="Bisque" Margin="1,1,1,0.8" Background="Gray" x:Name="btnEqual" Grid.Column="4" Grid.Row="5" Click="btnEqual_Click">=</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1,1,1,0.8" Background="Gray" x:Name="btn_factorial" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="4" Click="btn_factorial_Click">n!</Button>
 
-            <TextBox x:Name="TextDisplay" IsReadOnly="true" BorderThickness="0" Grid.Column="0" Grid.Row="0" TextAlignment="Right" VerticalAlignment="Bottom" Height="60" FontSize="45" Grid.ColumnSpan="5" Margin="0,0,0,76.6" Grid.RowSpan="2">0</TextBox>
+            <TextBox x:Name="TextDisplay" IsReadOnly="true" BorderThickness="0" Grid.Column="0" Grid.Row="0" TextAlignment="Right" VerticalAlignment="Bottom" Height="60" FontSize="45" Grid.ColumnSpan="5" Margin="0,0,0,76.6" Grid.RowSpan="2" TextChanged="TextDisplay_TextChanged">0</TextBox>
 
         </Grid>
     </Grid>

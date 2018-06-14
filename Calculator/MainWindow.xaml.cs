@@ -144,7 +144,7 @@ namespace Calculator
         {
             if (TextDisplay.Text == "0" && TextDisplay.Text != null)
             {
-                TextDisplay.Text = "0";
+                TextDisplay.Text =  "0";
             }
             else
             {
@@ -216,7 +216,6 @@ namespace Calculator
             if (operation == "")
             {
                 number1 *= -1;
-                number1 = float.Parse(TextDisplay.Text);
                 TextDisplay.Text = number1.ToString();
             }
             else
@@ -227,16 +226,26 @@ namespace Calculator
 
         private void btnBacksp_Click(object sender, RoutedEventArgs e)
         {
-            if (operation == "")
+
+            float length = TextDisplay.Text.Length - 1;
+            string text = TextDisplay.Text;
+            TextDisplay.Clear();
+            for (int i = 0; i < length; i++)
+            TextDisplay.Text = TextDisplay.Text + text[i];
+            
+        }
+
+        private void btn_factorial_Click(object sender, RoutedEventArgs e)
+        {
+            number1 = Convert.ToInt32(TextDisplay.Text);
+
+            float fact = number1;
+            for (float i = number1 - 1; i >= 1; i--)
             {
-                number1 = (number1 / 10);
-                TextDisplay.Text = number1.ToString();
+                fact = fact * i;
             }
-            else
-            {
-            number2 = (number2 / 10);
-            TextDisplay.Text = number2.ToString();
-            }
+            TextDisplay.Text = Convert.ToString(fact);
+            number1 = fact;
         }
 
         private void btnEqual_Click(object sender, RoutedEventArgs e)
@@ -279,12 +288,16 @@ namespace Calculator
                 TextDisplay.Text = Convert.ToString(result);
                 number1 = result;
             }
-            
-
-
-            
-            
+                
         }
 
+        private void TextDisplay_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+            
+
+        }
+
+        
     }
 }
