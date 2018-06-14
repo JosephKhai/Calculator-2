@@ -20,197 +20,174 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        long number1 = 0;
-        long number2 = 0;
-        string operation = "";
-
+      
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        float number1;
+        float number2;
+        string operation = "";
+
 
         private void btn7_Click(object sender, RoutedEventArgs e)
         {
-            if (operation == "")
+            if (TextDisplay.Text == "0" && TextDisplay.Text != null)
             {
-            number1 = (number1 * 10) + 7;
-            TextDisplay.Text = number1.ToString();
+                TextDisplay.Text = "7";
             }
             else
             {
-                number2 = (number2 * 10) + 7;
+                TextDisplay.Text = TextDisplay.Text + "7";
             }   
 
         }
 
         private void btn8_Click(object sender, RoutedEventArgs e)
         {
-            if (operation == "")
+            if (TextDisplay.Text == "0" && TextDisplay.Text != null)
             {
-                number1 = (number1 * 10) + 8;
-                TextDisplay.Text = number1.ToString();
+                TextDisplay.Text = "8";
             }
             else
             {
-                number2 = (number2 * 10) + 8;
+                TextDisplay.Text = TextDisplay.Text + "8";
             }
         }
 
         private void btn9_Click(object sender, RoutedEventArgs e)
         {
-            if (operation == "")
+            if (TextDisplay.Text == "0" && TextDisplay.Text != null)
             {
-                number1 = (number1 * 10) + 9;
-                TextDisplay.Text = number1.ToString();
+                TextDisplay.Text = "9";
             }
             else
             {
-                number2 = (number2 * 10) + 9;
+                TextDisplay.Text = TextDisplay.Text + "9";
             }
         }
 
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
-            if (operation == "")
+            if (TextDisplay.Text == "0" && TextDisplay.Text != null)
             {
-                number1 = (number1 * 10) + 4;
-                TextDisplay.Text = number1.ToString();
+                TextDisplay.Text = "4";
             }
             else
             {
-                number2 = (number2 * 10) + 4;
+                TextDisplay.Text = TextDisplay.Text + "4";
             }
         }
 
         private void btn5_Click(object sender, RoutedEventArgs e)
         {
-            if (operation == "")
+            if (TextDisplay.Text == "0" && TextDisplay.Text != null)
             {
-                number1 = (number1 * 10) + 5;
-                TextDisplay.Text = number1.ToString();
+                TextDisplay.Text = "5";
             }
             else
             {
-                number2 = (number2 * 10) + 5;
+                TextDisplay.Text = TextDisplay.Text + "5";
             }
         }
 
         private void btn6_Click(object sender, RoutedEventArgs e)
         {
-            if (operation == "")
+            if (TextDisplay.Text == "0" && TextDisplay.Text != null)
             {
-                number1 = (number1 * 10) + 6;
-                TextDisplay.Text = number1.ToString();
+                TextDisplay.Text = "6";
             }
             else
             {
-                number2 = (number2 * 10) + 6;
+                TextDisplay.Text = TextDisplay.Text + "6";
             }
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            if (operation == "")
+            if (TextDisplay.Text == "0" && TextDisplay.Text !=null)
             {
-                number1 = (number1 * 10) + 1;
-                TextDisplay.Text = number1.ToString();
+                TextDisplay.Text = "1";
             }
             else
             {
-                number2 = (number2 * 10) + 1;
+                TextDisplay.Text = TextDisplay.Text + "1";
             }
         }
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
-            if (operation == "")
+            if (TextDisplay.Text == "0" && TextDisplay.Text != null)
             {
-                number1 = (number1 * 10) + 2;
-                TextDisplay.Text = number1.ToString();
+                TextDisplay.Text = "2";
             }
             else
             {
-                number2 = (number2 * 10) + 2;
+                TextDisplay.Text = TextDisplay.Text + "2";
             }
         }
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
-            if (operation == "")
+            if (TextDisplay.Text == "0" && TextDisplay.Text != null)
             {
-                number1 = (number1 * 10) + 3;
-                TextDisplay.Text = number1.ToString();
+                TextDisplay.Text = "3";
             }
             else
             {
-                number2 = (number2 * 10) + 3;
+                TextDisplay.Text = TextDisplay.Text + "3";
             }
         }
 
         private void btnZero_Click(object sender, RoutedEventArgs e)
         {
-            if (operation == "")
+            if (TextDisplay.Text == "0" && TextDisplay.Text != null)
             {
-                number1 = (number1 * 10) + 0;
-                TextDisplay.Text = number1.ToString();
+                TextDisplay.Text = "0";
             }
             else
             {
-                number2 = (number2 * 10) + 0;
+                TextDisplay.Text = TextDisplay.Text + "0";
             }
         }
 
         private void btnPlus_Click(object sender, RoutedEventArgs e)
         {
             operation = "+";
+            number1 = float.Parse(TextDisplay.Text);
             TextDisplay.Text = "0";
         }
 
         private void btnMinus_Click(object sender, RoutedEventArgs e)
         {
             operation = "-";
+            number1 = float.Parse(TextDisplay.Text);
             TextDisplay.Text = "0";
         }
 
         private void btnMultiply_Click(object sender, RoutedEventArgs e)
         {
             operation = "*";
+            number1 = float.Parse(TextDisplay.Text);
             TextDisplay.Text = "0";
         }
 
         private void btnDecimal_Click(object sender, RoutedEventArgs e)
         {
-            TextDisplay.Text = TextDisplay.Text + ".";
+            if (!TextDisplay.Text.Contains("."))
+            {
+                TextDisplay.Text = TextDisplay.Text + ".";
+            }
         }
 
         private void btndivided_Click(object sender, RoutedEventArgs e)
         {
             operation = "/";
+            number1 = float.Parse(TextDisplay.Text);
             TextDisplay.Text = "0";
         }
 
-        private void btnEqual_Click(object sender, RoutedEventArgs e)
-        {
-            switch (operation)
-            {
-                case "+":
-                    TextDisplay.Text = (number1 + number2).ToString();
-                    break;
-
-                case "-":
-                    TextDisplay.Text = (number1 - number2).ToString();
-                    break;
-
-                case "/":
-                    TextDisplay.Text = (number1 / number2).ToString();
-                    break;
-
-                case "*":
-                    TextDisplay.Text = (number1 * number2).ToString();
-                    break;
-            }
-        }
 
         private void btnCE_Click(object sender, RoutedEventArgs e)
         {
@@ -233,24 +210,13 @@ namespace Calculator
             TextDisplay.Text = "0";
         }
 
-        private void btnBacksp_Click(object sender, RoutedEventArgs e)
-        {
-            if (operation == "")
-            {
-                number1 = (number1 / 10) + 0;
-                TextDisplay.Text = number1.ToString();
-            }
-            else
-            {
-                number2 = (number2 / 10) + 0;
-            }
-        }
-
+       
         private void btnPlusMinus_Click(object sender, RoutedEventArgs e)
         {
             if (operation == "")
             {
                 number1 *= -1;
+                number1 = float.Parse(TextDisplay.Text);
                 TextDisplay.Text = number1.ToString();
             }
             else
@@ -259,6 +225,66 @@ namespace Calculator
             }
         }
 
-        
+        private void btnBacksp_Click(object sender, RoutedEventArgs e)
+        {
+            if (operation == "")
+            {
+                number1 = (number1 / 10);
+                TextDisplay.Text = number1.ToString();
+            }
+            else
+            {
+            number2 = (number2 / 10);
+            TextDisplay.Text = number2.ToString();
+            }
+        }
+
+        private void btnEqual_Click(object sender, RoutedEventArgs e)
+        {
+            float result;
+            number2 = float.Parse(TextDisplay.Text);
+            number2 = float.Parse(TextDisplay.Text);
+
+
+            if (operation == "+")
+            {
+                result = (number1 + number2);
+                TextDisplay.Text = Convert.ToString(result);
+                number1 = result;
+            }
+
+            if (operation == "-")
+            {
+                result = (number1 - number2);
+                TextDisplay.Text = Convert.ToString(result);
+                number1 = result;
+            }
+            if (operation == "/")
+            {
+                if (number2 == 0)
+                {
+                    TextDisplay.Text = "Cannot divide by zero";
+                }
+                else
+                {
+                    result = (number1 / number2);
+                    TextDisplay.Text = Convert.ToString(result);
+                    number1 = result;
+                }
+            }
+            
+            if (operation == "*")
+            {
+                result = (number1 * number2);
+                TextDisplay.Text = Convert.ToString(result);
+                number1 = result;
+            }
+            
+
+
+            
+            
+        }
+
     }
 }
