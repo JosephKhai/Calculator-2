@@ -179,6 +179,11 @@ namespace Calculator
             TextDisplay.Text = "0";
         }
 
+        private void btnDecimal_Click(object sender, RoutedEventArgs e)
+        {
+            TextDisplay.Text = TextDisplay.Text + ".";
+        }
+
         private void btndivided_Click(object sender, RoutedEventArgs e)
         {
             operation = "/";
@@ -254,9 +259,6 @@ namespace Calculator
             }
         }
 
-        private void btnDecimal_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
 }

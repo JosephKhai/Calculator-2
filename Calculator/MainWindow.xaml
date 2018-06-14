@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="Basic Calculator" Height="430" Width="280">
+        Title="Basic Calculator" Height="500" Width="320">
     <Grid>
-        <Grid>
+        <Grid Margin="5"  >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -16,7 +16,7 @@
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition/>
+                <RowDefinition/> 
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -24,32 +24,32 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Button x:Name="btnCE" Grid.Column="0" Grid.Row="1" Click="btnCE_Click">CE</Button>
-            <Button x:Name="btnClear" Grid.Column="1" Grid.Row="1" Click="btnClear_Click">Clear</Button>
-            <Button x:Name="btnBacksp" Grid.Column="2" Grid.Row="1" Click="btnBacksp_Click">⌫</Button>
-            <Button x:Name="btndivided" Grid.Column="3" Grid.Row="1" Click="btndivided_Click">÷</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1 1 1 1" Background="Gray" x:Name="btnCE" Grid.Column="0" Grid.Row="1" Click="btnCE_Click">CE</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1 1 1 1" Background="Gray" x:Name="btnClear" Grid.Column="1" Grid.Row="1" Click="btnClear_Click">Clear</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1 1 1 1" Background="Gray" x:Name="btnBacksp" Grid.Column="2" Grid.Row="1" Click="btnBacksp_Click">⌫</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1 1 1 1" Background="Gray" x:Name="btndivided" Grid.Column="3" Grid.Row="1" Click="btndivided_Click">÷</Button>
 
-            <Button x:Name="btn7" Grid.Column="0" Grid.Row="2" Click="btn7_Click">7</Button>
-            <Button x:Name="btn8" Grid.Column="1" Grid.Row="2" Click="btn8_Click">8</Button>
-            <Button x:Name="btn9" Grid.Column="2" Grid.Row="2" Click="btn9_Click">9</Button>
-            <Button x:Name="btnMultiply" Grid.Column="3" Grid.Row="2" Click="btnMultiply_Click">*</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1 1 1 1" Background="Gray" x:Name="btn7" Grid.Column="0" Grid.Row="2" Click="btn7_Click">7</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1 1 1 1" Background="Gray" x:Name="btn8" Grid.Column="1" Grid.Row="2" Click="btn8_Click">8</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1 1 1 1" Background="Gray" x:Name="btn9" Grid.Column="2" Grid.Row="2" Click="btn9_Click">9</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1 1 1 1" Background="Gray" x:Name="btnMultiply" Grid.Column="3" Grid.Row="2" Click="btnMultiply_Click">*</Button>
 
-            <Button x:Name="btn4" Grid.Column="0" Grid.Row="3" Click="btn4_Click">4</Button>
-            <Button x:Name="btn5" Grid.Column="1" Grid.Row="3" Click="btn5_Click">5</Button>
-            <Button x:Name="btn6" Grid.Column="2" Grid.Row="3" Click="btn6_Click">6</Button>
-            <Button x:Name="btnMinus" Grid.Column="3" Grid.Row="3" Click="btnMinus_Click">-</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1 1 1 1" Background="Gray" x:Name="btn4" Grid.Column="0" Grid.Row="3" Click="btn4_Click">4</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1 1 1 1" Background="Gray" x:Name="btn5" Grid.Column="1" Grid.Row="3" Click="btn5_Click">5</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1 1 1 1" Background="Gray" x:Name="btn6" Grid.Column="2" Grid.Row="3" Click="btn6_Click">6</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1 1 1 1" Background="Gray" x:Name="btnMinus" Grid.Column="3" Grid.Row="3" Click="btnMinus_Click">-</Button>
 
-            <Button x:Name="btn1" Grid.Column="0" Grid.Row="4" Click="btn1_Click">1</Button>
-            <Button x:Name="btn2" Grid.Column="1" Grid.Row="4" Click="btn2_Click">2</Button>
-            <Button x:Name="btn3" Grid.Column="2" Grid.Row="4" Click="btn3_Click">3</Button>
-            <Button x:Name="btnPlus" Grid.Column="3" Grid.Row="4" Click="btnPlus_Click">+</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1 1 1 1" Background="Gray" x:Name="btn1" Grid.Column="0" Grid.Row="4" Click="btn1_Click">1</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1 1 1 1" Background="Gray" x:Name="btn2" Grid.Column="1" Grid.Row="4" Click="btn2_Click">2</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1 1 1 1" Background="Gray" x:Name="btn3" Grid.Column="2" Grid.Row="4" Click="btn3_Click">3</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1 1 1 1" Background="Gray" x:Name="btnPlus" Grid.Column="3" Grid.Row="4" Click="btnPlus_Click">+</Button>
 
-            <Button x:Name="btnPlusMinus" Grid.Column="0" Grid.Row="5" Click="btnPlusMinus_Click">±</Button>
-            <Button x:Name="btnZero" Grid.Column="1" Grid.Row="5" Click="btnZero_Click">0</Button>
-            <Button x:Name="btnDecimal" Grid.Column="2" Grid.Row="5" Click="btnDecimal_Click">.</Button>
-            <Button x:Name="btnEqual" Grid.Column="3" Grid.Row="5" Click="btnEqual_Click">=</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1 1 1 1" Background="Gray" x:Name="btnPlusMinus" Grid.Column="0" Grid.Row="5" Click="btnPlusMinus_Click">±</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1 1 1 1" Background="Gray" x:Name="btnZero" Grid.Column="1" Grid.Row="5" Click="btnZero_Click">0</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1 1 1 1" Background="Gray" x:Name="btnDecimal" Grid.Column="2" Grid.Row="5" Click="btnDecimal_Click">.</Button>
+            <Button FontSize="18" BorderBrush="Bisque" Margin="1 1 1 1" Background="Gray" x:Name="btnEqual" Grid.Column="3" Grid.Row="5" Click="btnEqual_Click">=</Button>
 
-            <TextBox x:Name="TextDisplay" IsReadOnly="true" BorderThickness="1" Grid.Column="0" Grid.Row="0" TextAlignment="Right" VerticalAlignment="Bottom" FontSize="30" Grid.ColumnSpan="4">0</TextBox>
+            <TextBox x:Name="TextDisplay" IsReadOnly="true" BorderThickness="0" Grid.Column="0" Grid.Row="0" TextAlignment="Right" VerticalAlignment="Bottom" Height="60" FontSize="45" Grid.ColumnSpan="4">0</TextBox>
 
         </Grid>
     </Grid>
